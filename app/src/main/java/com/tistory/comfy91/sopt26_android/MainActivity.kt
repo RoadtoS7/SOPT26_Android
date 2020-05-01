@@ -41,6 +41,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object{
-        val SIGN_UP = 100
+        const val SIGN_UP = 100
     }
 }
