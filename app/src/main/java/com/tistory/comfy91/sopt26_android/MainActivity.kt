@@ -22,8 +22,24 @@ class MainActivity : AppCompatActivity() {
             }
             else{
                 val intent = Intent(this@MainActivity, BottomNavigationActivity::class.java)
-                startActivity(intent)
+                startActivityForResult(intent, SIGN_UP)
             }
         }
+    }
+
+    override fun startActivityForResult(intent: Intent?, requestCode: Int) {
+        super.startActivityForResult(intent, requestCode)
+        when(requestCode){
+            100 ->{
+                edtId.setText(intent?.getStringExtra("ID"))
+                edtPw.setText(intent?.getStringExtra("PW"))
+            }
+        }
+
+
+    }
+
+    companion object{
+        val SIGN_UP = 100
     }
 }
