@@ -3,6 +3,7 @@ package com.tistory.comfy91.sopt26_android
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -17,10 +18,11 @@ class MainActivity : AppCompatActivity() {
     fun initUi(){
         btnSignIn.setOnClickListener {
             if(edtId.text.isNullOrBlank() || edtPw.text.isNullOrBlank()){
-
+                Toast.makeText(this, "아이디나 비밀번호를 입력해주세요", Toast.LENGTH_LONG)
             }
             else{
-
+                val intent = Intent(this@MainActivity, BottomNavigationActivity::class.java)
+                startActivity(intent)
             }
         }
     }
