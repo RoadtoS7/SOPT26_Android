@@ -1,6 +1,7 @@
 package com.tistory.comfy91.sopt26_android
 
 import android.content.Intent
+import android.content.pm.SigningInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "아이디나 비밀번호를 입력해주세요", Toast.LENGTH_LONG)
             }
             else{
-                val intent = Intent(this@MainActivity, BottomNavigationActivity::class.java)
+                val intent = Intent(this@MainActivity, SignUpActivity::class.java)
                 startActivityForResult(intent, SIGN_UP)
             }
         }

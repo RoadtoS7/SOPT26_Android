@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BottomNavigationActivity"></activity>
+        <activity android:name=".ConstraintDimensionRatioActivity"></activity>
+        <activity android:name=".BottomNavigationActivity" />
         <activity android:name=".RelativeLoginActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".MainActivity">
