@@ -13,8 +13,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".RecyclerView.RecyclerViewActivity"></activity>
         <activity android:name=".ViewAndViewContainer.ConstraintDimensionRatioActivity" />
-        <activity android:name=".BottomNavigationBar.BottomNavigationActivity"
-            android:exported="true"/>
+        <activity
+            android:name=".BottomNavigationBar.BottomNavigationActivity"
+            android:exported="true" />
         <activity android:name=".ViewAndViewContainer.RelativeLoginActivity" />
         <activity android:name=".ViewAndViewContainer.SignUpActivity" />
         <activity android:name=".ViewAndViewContainer.MainActivity">
