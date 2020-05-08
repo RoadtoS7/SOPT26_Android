@@ -1,10 +1,10 @@
-package com.tistory.comfy91.sopt26_android
+package com.tistory.comfy91.sopt26_android.ViewAndViewContainer
 
 import android.content.Intent
-import android.content.pm.SigningInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.tistory.comfy91.sopt26_android.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -23,7 +23,9 @@ class MainActivity : AppCompatActivity() {
             }
             else{
                 val intent = Intent(this@MainActivity, SignUpActivity::class.java)
-                startActivityForResult(intent, SIGN_UP)
+                startActivityForResult(intent,
+                    SIGN_UP
+                )
             }
         }
     }

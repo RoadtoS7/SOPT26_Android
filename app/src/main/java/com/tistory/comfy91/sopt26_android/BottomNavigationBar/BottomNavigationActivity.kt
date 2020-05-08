@@ -1,11 +1,9 @@
-package com.tistory.comfy91.sopt26_android
+package com.tistory.comfy91.sopt26_android.BottomNavigationBar
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
-import androidx.fragment.app.FragmentManager
 import androidx.viewpager.widget.ViewPager
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.tistory.comfy91.sopt26_android.R
 import kotlinx.android.synthetic.main.activity_bottom_navigation.*
 
 class BottomNavigationActivity : AppCompatActivity() {
@@ -15,7 +13,10 @@ class BottomNavigationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_bottom_navigation)
 
         // viewpager adapter
-        bn_viewpager.adapter = MainPagerAdapter(supportFragmentManager)
+        bn_viewpager.adapter =
+            MainPagerAdapter(
+                supportFragmentManager
+            )
         bn_viewpager.offscreenPageLimit = 2
 
         // viewpagr와 bottom navigation view 연결

@@ -1,7 +1,8 @@
-package com.tistory.comfy91.sopt26_android
+package com.tistory.comfy91.sopt26_android.ViewAndViewContainer
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.tistory.comfy91.sopt26_android.R
 
 class RelativeLoginActivity : AppCompatActivity() {
 
