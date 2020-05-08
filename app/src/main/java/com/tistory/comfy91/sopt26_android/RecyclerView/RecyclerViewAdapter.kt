@@ -8,10 +8,10 @@ import com.tistory.comfy91.sopt26_android.R
 import com.tistory.comfy91.sopt26_android.data.RvData
 
 class RecyclerViewAdapter(private val context: Context): RecyclerView.Adapter<RecyclerViewHolder>(){
-    private val datas = mutableListOf<RvData>()
+    var datas = mutableListOf<RvData>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.item_insta, parent)
+        val view = LayoutInflater.from(context).inflate(R.layout.item_insta, parent, false)
         return RecyclerViewHolder(view)
     }
 

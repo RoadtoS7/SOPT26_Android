@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tistory.comfy91.sopt26_android">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,8 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewAndViewContainer.ConstraintDimensionRatioActivity"></activity>
-        <activity android:name=".BottomNavigationBar.BottomNavigationActivity" />
+        <activity android:name=".RecyclerView.RecyclerViewActivity"></activity>
+        <activity android:name=".ViewAndViewContainer.ConstraintDimensionRatioActivity" />
+        <activity android:name=".BottomNavigationBar.BottomNavigationActivity"
+            android:exported="true"/>
         <activity android:name=".ViewAndViewContainer.RelativeLoginActivity" />
         <activity android:name=".ViewAndViewContainer.SignUpActivity" />
         <activity android:name=".ViewAndViewContainer.MainActivity">
