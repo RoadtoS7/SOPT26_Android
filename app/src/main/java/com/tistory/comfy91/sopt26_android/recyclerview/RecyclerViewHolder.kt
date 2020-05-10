@@ -6,7 +6,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.tistory.comfy91.sopt26_android.R
-import com.tistory.comfy91.sopt26_android.data.RvData
+import com.tistory.comfy91.sopt26_android.recyclerviewdata.RvData
 
 class RecyclerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
     private val imgProfile: ImageView = itemView.findViewById(R.id.img_profile)

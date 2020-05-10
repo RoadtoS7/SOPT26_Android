@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.tistory.comfy91.sopt26_android.R
-import com.tistory.comfy91.sopt26_android.data.RvData
+import com.tistory.comfy91.sopt26_android.recyclerviewdata.RvData
 import com.tistory.comfy91.sopt26_android.recyclerview.RecyclerViewAdapter
 import com.tistory.comfy91.sopt26_android.recyclerview.RvItemDecoration
 import kotlinx.android.synthetic.main.fragment_home.*

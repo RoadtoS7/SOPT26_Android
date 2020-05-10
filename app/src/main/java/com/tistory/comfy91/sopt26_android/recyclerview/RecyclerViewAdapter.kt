@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.tistory.comfy91.sopt26_android.R
-import com.tistory.comfy91.sopt26_android.data.RvData
+import com.tistory.comfy91.sopt26_android.recyclerviewdata.RvData
 
 class RecyclerViewAdapter(private val context: Context): RecyclerView.Adapter<RecyclerViewHolder>(){
     var datas = mutableListOf<RvData>()
