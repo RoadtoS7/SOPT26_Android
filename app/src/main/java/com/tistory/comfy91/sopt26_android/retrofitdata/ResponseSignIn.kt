@@ -10,5 +10,5 @@ data class ResponseSignIn (
     @SerializedName("message")
     val message: String,
     @SerializedName("data")
-    val data: ResponseSignInData
+    val data: ResponseSignInData?
 )
