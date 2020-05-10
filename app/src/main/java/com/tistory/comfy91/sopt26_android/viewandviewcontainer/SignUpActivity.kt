@@ -13,7 +13,7 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-        tvSignUp.setOnClickListener {
+        tv_sign_up.setOnClickListener {
             if(tvId.text.isNullOrBlank() || tvPw.text.isNullOrBlank()){
                 Toast.makeText(this, "아이디나 패스워드를 입력해주세요.", Toast.LENGTH_LONG).show()
             }

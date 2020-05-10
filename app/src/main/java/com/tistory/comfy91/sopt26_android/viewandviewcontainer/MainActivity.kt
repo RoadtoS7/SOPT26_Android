@@ -26,9 +26,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initUi(){
-        val id = edtId.text
-        val pw = edtPw.text
-        btnSignIn.setOnClickListener {
+        val id = edt_id.text
+        val pw = edt_pw.text
+        btn_sign_in.setOnClickListener {
             if(id.isNullOrBlank() || pw.isNullOrBlank()){
                 Toast.makeText(this, "아이디나 비밀번호를 입력해주세요", Toast.LENGTH_LONG)
             }
@@ -36,6 +36,8 @@ class MainActivity : AppCompatActivity() {
                 requestSignIn(id.toString(), pw.toString())
             }
         }
+
+
     }
 
     private fun requestSignIn(id: String, pw: String){
@@ -79,8 +81,8 @@ class MainActivity : AppCompatActivity() {
         super.startActivityForResult(intent, requestCode)
         when(requestCode){
             100 ->{
-                edtId.setText(intent?.getStringExtra("ID"))
-                edtPw.setText(intent?.getStringExtra("PW"))
+                edt_id.setText(intent?.getStringExtra("ID"))
+                edt_pw.setText(intent?.getStringExtra("PW"))
             }
         }
 

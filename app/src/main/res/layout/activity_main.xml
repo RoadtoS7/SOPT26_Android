@@ -6,17 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".viewandviewcontainer.MainActivity">
     <EditText
-        android:id="@+id/edtPw"
+        android:id="@+id/edt_pw"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPassword"
         android:hint="패스워드"
-        app:layout_constraintEnd_toEndOf="@+id/edtId"
+        app:layout_constraintEnd_toEndOf="@+id/edt_id"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtId"
-        app:layout_constraintTop_toBottomOf="@+id/edtId" />
+        app:layout_constraintStart_toStartOf="@+id/edt_id"
+        app:layout_constraintTop_toBottomOf="@+id/edt_id" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -30,7 +30,7 @@
         app:srcCompat="@drawable/img_sopt" />
 
     <EditText
-        android:id="@+id/edtId"
+        android:id="@+id/edt_id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -46,35 +46,35 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/btnSignIn"
+        android:id="@+id/btn_sign_in"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="로그인"
-        app:layout_constraintEnd_toEndOf="@+id/edtPw"
+        app:layout_constraintEnd_toEndOf="@+id/edt_pw"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtPw"
-        app:layout_constraintTop_toBottomOf="@+id/edtPw" />
+        app:layout_constraintStart_toStartOf="@+id/edt_pw"
+        app:layout_constraintTop_toBottomOf="@+id/edt_pw" />
 
     <TextView
-        android:id="@+id/tvMessage"
+        android:id="@+id/tv_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="아직 회원이 아니신가요?"
-        app:layout_constraintEnd_toStartOf="@+id/tvSignUp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_sign_up"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_sign_in" />
 
     <TextView
-        android:id="@+id/tvSignUp"
+        android:id="@+id/tv_sign_up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tv_sign_in"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvMessage"
-        app:layout_constraintTop_toTopOf="@+id/tvMessage" />
+        app:layout_constraintStart_toEndOf="@+id/tv_message"
+        app:layout_constraintTop_toTopOf="@+id/tv_message" />
 </androidx.constraintlayout.widget.ConstraintLayout>
