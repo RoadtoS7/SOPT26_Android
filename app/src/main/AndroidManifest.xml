@@ -10,15 +10,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".RecyclerView.RecyclerViewActivity"></activity>
-        <activity android:name=".ViewAndViewContainer.ConstraintDimensionRatioActivity" />
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".recyclerview.RecyclerViewActivity"></activity>
+        <activity android:name=".viewandviewcontainer.ConstraintDimensionRatioActivity" />
         <activity
-            android:name=".BottomNavigationBar.BottomNavigationActivity"
+            android:name=".bottomnavigationbar.BottomNavigationActivity"
             android:exported="true" />
-        <activity android:name=".ViewAndViewContainer.RelativeLoginActivity" />
-        <activity android:name=".ViewAndViewContainer.SignUpActivity" />
-        <activity android:name=".ViewAndViewContainer.MainActivity">
+        <activity android:name=".viewandviewcontainer.RelativeLoginActivity" />
+        <activity android:name=".viewandviewcontainer.SignUpActivity" />
+        <activity android:name=".viewandviewcontainer.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

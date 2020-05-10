@@ -1,17 +1,16 @@
-package com.tistory.comfy91.sopt26_android.BottomNavigationBar
+package com.tistory.comfy91.sopt26_android.bottomnavigationbar
 
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.tistory.comfy91.sopt26_android.R
-import com.tistory.comfy91.sopt26_android.RecyclerView.RecyclerViewAdapter
-import com.tistory.comfy91.sopt26_android.RecyclerView.RvItemDecoration
 import com.tistory.comfy91.sopt26_android.data.RvData
+import com.tistory.comfy91.sopt26_android.recyclerview.RecyclerViewAdapter
+import com.tistory.comfy91.sopt26_android.recyclerview.RvItemDecoration
 import kotlinx.android.synthetic.main.fragment_home.*
 
 /**

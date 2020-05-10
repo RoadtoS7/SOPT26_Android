@@ -1,4 +1,4 @@
-package com.tistory.comfy91.sopt26_android.ViewAndViewContainer
+package com.tistory.comfy91.sopt26_android.viewandviewcontainer
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.tistory.comfy91.sopt26_android.BottomNavigationBar
+package com.tistory.comfy91.sopt26_android.bottomnavigationbar
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.tistory.comfy91.sopt26_android.RecyclerView
+package com.tistory.comfy91.sopt26_android.recyclerview
 
 import android.view.View
 import android.widget.ImageView
