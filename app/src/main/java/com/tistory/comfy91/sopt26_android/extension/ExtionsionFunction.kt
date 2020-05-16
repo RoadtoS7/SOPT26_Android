@@ -8,6 +8,8 @@ import android.widget.EditText
 
 import retrofit2.Call
 import android.widget.Toast
+import retrofit2.Callback
+import retrofit2.Response
 
 // Context 확장 함수
 fun Context.toast(msg: String){
@@ -28,5 +30,20 @@ fun EditText.onTextChanged(funTextChanged : (CharSequence?) -> Unit){
 
 }
 
+// Call enqueue 함수 확장함수로 간단하게 만들기
+fun <ResponseType>Call<ResponseType>.enqueue(
+    onFailure:(Call<ResponseType>, Throwable) -> Unit,
+    onResponse: (Call<ResponseType>, Response<ResponseType>) -> Unit
+){
+    this.enqueue(object: Callback<ResponseType>{
+        override fun onFailure(call: Call<ResponseType>, t: Throwable) {
+            onFailure(call, t)
+        }
+
+        override fun onResponse(call: Call<ResponseType>, response: Response<ResponseType>) {
+            onResponse(call, response)
+        }
+    })
+}
 
 
