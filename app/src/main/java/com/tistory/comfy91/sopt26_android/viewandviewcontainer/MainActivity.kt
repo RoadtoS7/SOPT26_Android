@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.Toast
 import com.tistory.comfy91.sopt26_android.R
 import com.tistory.comfy91.sopt26_android.bottomnavigationbar.BottomNavigationActivity
+import com.tistory.comfy91.sopt26_android.extension.enqueue
 import com.tistory.comfy91.sopt26_android.extension.onTextChanged
 import com.tistory.comfy91.sopt26_android.extension.toast
 import com.tistory.comfy91.sopt26_android.retrofitdata.ResponseSignIn
@@ -55,40 +56,36 @@ class MainActivity : AppCompatActivity() {
 
     private fun requestSignIn(id: String, pw: String){
         respository.requestSignIn(id, pw)
-            .enqueue(object: Callback<ResponseSignIn> {
-                override fun onFailure(call: Call<ResponseSignIn>, t: Throwable) {
-                    Log.d("TAG", "requestSignIn onFailure (message :${t.message}")
-                    Toast.makeText(this@MainActivity, "통신이 불완전하여 로그인에 실패했습니다.", Toast.LENGTH_LONG)
-                }
-
-                override fun onResponse(
-                    call: Call<ResponseSignIn>,
-                    response: Response<ResponseSignIn>
-                ) {
-                    if(response.isSuccessful){
+            .enqueue(
+                onFailure = {_, t ->
+                    Log.d(TAG, "requestSignIn onFailure (message :${t.message}")
+                    this.toast("통신이 불완전하여 로그인에 실패했습니다.")
+                },
+                onResponse = { c, r ->
+                    if(r.isSuccessful){
                         //Returns true if {@link #code()} is in the range [200..300). */
-                        if(response.body()?.success!!){
+                        if(r.body()?.success!!){
                             val intent = Intent(this@MainActivity, BottomNavigationActivity::class.java)
                             startActivity(intent)
                         }
                         else{
                             Log.d("TAG", "requestSignIn onSuccess but response body success is not true " +
-                                    "(status code:${response.code()}) " +
-                                    "(message: ${response.message()})"+
-                                    "(errorBody: ${response.errorBody()})")
-                            Toast.makeText(this@MainActivity, "통신이 불완전하여 로그인에 실패했습니다.", Toast.LENGTH_LONG)
+                                    "(status code:${r.code()}) " +
+                                    "(message: ${r.message()})"+
+                                    "(errorBody: ${r.errorBody()})")
+                            this.toast("통신이 불완전하여 로그인에 실패했습니다.")
                         }
                     }
                     else{
                         Log.d("TAG", "requestSignIn onSuccess but response code is not 200 ~ 300 " +
-                                "(status code:${response.code()}) " +
-                                "(message: ${response.message()})"+
-                                "(errorBody: ${response.errorBody()})")
-                        Toast.makeText(this@MainActivity, "통신이 불완전하여 로그인에 실패했습니다.", Toast.LENGTH_LONG)
+                                "(status code:${r.code()}) " +
+                                "(message: ${r.message()})"+
+                                "(errorBody: ${r.errorBody()})")
+                        this.toast("통신이 불완전하여 로그인에 실패했습니다.")
                     }
-                }
-            })
 
+                }
+            )
     }
     override fun startActivityForResult(intent: Intent?, requestCode: Int) {
         super.startActivityForResult(intent, requestCode)
