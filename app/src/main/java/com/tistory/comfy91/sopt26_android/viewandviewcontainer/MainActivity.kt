@@ -7,6 +7,8 @@ import android.util.Log
 import android.widget.Toast
 import com.tistory.comfy91.sopt26_android.R
 import com.tistory.comfy91.sopt26_android.bottomnavigationbar.BottomNavigationActivity
+import com.tistory.comfy91.sopt26_android.extension.onTextChanged
+import com.tistory.comfy91.sopt26_android.extension.toast
 import com.tistory.comfy91.sopt26_android.retrofitdata.ResponseSignIn
 import com.tistory.comfy91.sopt26_android.retrofitdata.ServerRespository
 import kotlinx.android.synthetic.main.activity_main.*
@@ -26,8 +28,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initUi(){
+        edt_id.onTextChanged {
+            if(it.isNullOrBlank()){
+                this.toast("아이디나 비밀번호를 입력해주세요.")
+            }
+        }
+        edt_pw.onTextChanged { s ->
+            if(s.isNullOrBlank()){
+                this.toast("아이디나 비밀번호를 입력해주세요.")
+            }
+        }
         val id = edt_id.text
         val pw = edt_pw.text
+
         btn_sign_in.setOnClickListener {
             if(id.isNullOrBlank() || pw.isNullOrBlank()){
                 Toast.makeText(this, "아이디나 비밀번호를 입력해주세요", Toast.LENGTH_LONG)
